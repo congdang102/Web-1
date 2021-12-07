@@ -164,6 +164,9 @@ function currentSlide(n) {
 function showSlidesPost(n) {
     var j;
     var slidesPost = document.querySelectorAll('.js-mySlidesPost');
+    if (slidesPost.length == 0) {
+        return;
+    }
     if (n > slidesPost.length) {slideIndexPost = 1}    
     if (n < 1) {slideIndexPost = slidesPost.length}
     for (j = 0; j < slidesPost.length; j++) {
