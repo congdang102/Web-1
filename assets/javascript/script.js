@@ -175,4 +175,35 @@ function showSlidesPost(n) {
     }
     slidesPost[slideIndexPost-1].style.display = "block";
 }
-
+// login
+const loginRegister = document.querySelector('#login-register')
+const login = document.querySelector('#login');
+const register = document.querySelector('#register');
+function login_open () {
+    if (loginRegister.style.display == "flex") {
+        loginRegister.style.display = "none";
+        login.style.display = "flex";
+        register.style.display = "none";
+    }
+    else {
+        loginRegister.style.display = "flex";
+        login.style.display = "flex";
+        register.style.display = "none";
+    }
+    login.addEventListener('click', function (event) {
+        event.stopPropagation();
+    })
+    register.addEventListener('click', function (event) {
+        event.stopPropagation();
+    })
+}
+function register_open () {
+    if (register.style.display == "none") {
+        login.style.display = "none";
+        register.style.display = "flex";
+    }
+    else {
+        login.style.display = "flex";
+        register.style.display = "none";
+    }
+}

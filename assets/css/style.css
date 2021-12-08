@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+*:focus {
+    outline: none;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -13,6 +16,13 @@ ol, ul {
 }
 a {
     text-decoration: none;
+}
+button {
+    border: none;
+    background: none;
+}
+input {
+    border: none;
 }
 .text-center {
     text-align: center !important;
@@ -109,7 +119,6 @@ a {
 }
 .navbar-btn button {
     color: #333;
-    border: none;
     width: 28px;
     height: 28px;
     z-index: 1;
@@ -117,10 +126,24 @@ a {
     cursor: pointer;
 }
 
+#header .login-btn {
+    line-height: 54px;
+    cursor: pointer;
+}
+#header .login-btn span {
+    margin-left: 5px;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-family: Montserrat;
+}
+#header .login-btn:hover button {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 #header .search-box {
-    justify-content: right;
-    align-items: center;
-    display: flex;
+    line-height: 54px;
+    text-align: right;
 }
 #header .search-box .button {
     cursor: pointer;
@@ -128,9 +151,7 @@ a {
     max-height: 22px;
     margin-right: 10px;
     text-align: center;
-    border: none;
     color: #626262;
-    background: none;
 }
 .header-logo {
     text-align: center;
@@ -147,7 +168,6 @@ a {
     left: 0;
     background-color: rgba(0, 0, 0, 0.3);
 }
-
 .nav-mobile-tablet {
     display: none;
     position: fixed;
@@ -158,6 +178,7 @@ a {
     width: 320px;
     max-width: 100%;
     z-index: 1;
+    animation: fadeInLeft ease 0.5s;
 }
 .nav-list-mobile-tablet a {
     color: #333;
@@ -610,15 +631,6 @@ a {
 /* css for js */
 
 .js-mySlides {display: none;}
-
-/* Fading animation */
-.fade {
-    animation: fade 1.5s linear;
-}
-@keyframes fade {
-    from {opacity: .6} 
-    to {opacity: 1}
-}
 /* next vs pre */
 .js-mySlidesPost {display: none;}
  /* Slideshow container */
@@ -653,6 +665,7 @@ a {
 .prev:hover, .next:hover {
     background-color: pink;
 }
+
 /* search web */
 .search-container {
     width: 100%;
@@ -683,4 +696,177 @@ a {
 }
 .search-item h4:hover {
     opacity: 0.6;
+}
+
+/* login */
+#login-register {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: "Poppins", sans-serif;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#login {
+    display: flex;
+}
+#register {
+    display: none;
+}
+#login-register .login-container {
+    position: relative;
+    background-color: #fff;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 600px;
+    padding-top: 40px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+#login-register .login-container .switch-btn {
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+#login-register .login-container .switch-btn a {
+    color: #5fbbe9f8;
+    cursor: pointer;
+}
+#login-register .login-container .login-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+#login-register .login-container input[type=text] {
+    background-color: #f6f6f6;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    border-radius: 5px 5px 5px 5px;
+}
+#login-register .login-container input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+#login-register .login-container input[type=text]::placeholder {
+    color: #cccccc;
+}
+#login-register .login-container input[type=submit] {
+    background-color: #56baed;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 0 30px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+#login-register .login-container input[type=submit]:hover {
+    background-color: #39ace7;
+}
+#login-register .login-container input[type=submit]:active {
+    transform: scale(0.95);
+}
+#login-register .login-container .login-footer {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+}
+#login-register .login-container .login-footer a {
+    color: #92badd;
+    display: inline-block;
+}
+/* animation */
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.fade {
+    animation: fade 1.5s linear;
+}
+@keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+}
+@keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+} 
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    } 
+    to {
+        opacity:1;
+    }
+}
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+.fadeIn.first {
+    animation-delay: 0.4s;
+}
+.fadeIn.second {
+    animation-delay: 0.6s;
+}
+.fadeIn.third {
+    animation-delay: 0.8s;
+}
+.fadeIn.fourth {
+    animation-delay: 1s;
+}
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+.underlineHover:hover:after{
+    width: 100%;
 }
