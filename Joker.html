@@ -120,10 +120,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header-logo logo">
-                    <div>
-                        <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
-                    </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -154,7 +152,7 @@
                                     ổn, hỗn loạn.</p>
                                 <br>
                                 <img src="./assets/img/Joker.jpg" alt="Joker">
-                                <p class="italic-text">“Joker” là một phim tâm lý giật gân của đạo 
+                                <p class="italic-text text-center">“Joker” là một phim tâm lý giật gân của đạo 
                                     diễn người Mỹ Todd Phillips</p>
                                 <br>
                                 “Joker” là một phim tâm lý giật gân của đạo diễn người Mỹ Todd 
@@ -186,7 +184,7 @@
                                 bất cứ một cuốn truyện tranh nào.
                                 <br>
                                 <img src="./assets/img/Joker1.jpg" alt="Joker">
-                                <p class="italic-text">“Joker” từng được công chiếu tại LHP Venice 
+                                <p class="italic-text text-center">“Joker” từng được công chiếu tại LHP Venice 
                                     (Ý) và giành giải Sư tử vàng cao quý nhất</p>
                                 <br>
                                 “Joker” từng được công chiếu tại LHP Venice (Ý) và giành giải Sư tử 
@@ -222,7 +220,7 @@
                                 - Nam chính xuất sắc nhất.
                                 <br>
                                 <img src="./assets/img/Joker2.jpg" alt="Joker">
-                                <p class = "italic-text"> Thời điểm đầu ra rạp, “Joker” làm dấy lên 
+                                <p class = "italic-text text-center">Thời điểm đầu ra rạp, “Joker” làm dấy lên 
                                     tranh cãi về những hệ lụy mà một bộ phim u tối như thế có thể 
                                     gây ra </p>
                                 <br>
@@ -258,7 +256,7 @@
                                 bộ phim này rất khác biệt về mặt thể loại.
                                 <br>
                                 <img src="./assets/img/Joker3.jpg" alt="Joker">
-                                <p class = "italic-text">“Joker” thậm chí không nằm trong thể loại 
+                                <p class = "italic-text text-center">“Joker” thậm chí không nằm trong thể loại 
                                     mà vốn dĩ nó thuộc về - phim chuyển thể từ nhân vật truyện tranh</p>
                                 <br>
                                 “Joker” thậm chí không nằm trong thể loại mà vốn dĩ nó thuộc về - 
@@ -289,7 +287,7 @@
                                 đổ một con người vốn đã có nhiều bất an.
                                 <br>
                                 <img src="./assets/img/Joker4.jpg" alt="Joker">
-                                <p class="italic-text"> Dù ước mơ lớn, nhưng Arthur Fleck chỉ có thể 
+                                <p class="italic-text text-center">Dù ước mơ lớn, nhưng Arthur Fleck chỉ có thể 
                                     sống lay lắt, tạm bợ bằng việc đi làm thuê</p>
                                 <br>
                                 Dù ước mơ lớn, nhưng Arthur Fleck chỉ có thể sống lay lắt, tạm bợ bằng 
@@ -324,7 +322,7 @@
                                 triển tâm lý nhân vật.
                                 <br>
                                 <img src="./assets/img/Joker5.jpg" alt="Joker">
-                                <p class="italic-text"> Arthur Fleck là một gã cô độc thảm hại, 
+                                <p class="italic-text text-center">Arthur Fleck là một gã cô độc thảm hại, 
                                     gánh trên vai sức nặng của số phận bi kịch</p>
                                 <br>
                                 Arthur Fleck là một gã cô độc thảm hại, gánh trên vai sức nặng của 
@@ -537,7 +535,7 @@
                             <i class="ti-github icons"></i>
                         </a>
                     </div>
-                    <div class="col l-8 m-12 sm-12 footer-logo logo">
+                    <div class="col l-8 m-12 sm-12 footer-logo">
                         <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
                     </div>
                 </div>
@@ -550,9 +548,11 @@
         <div class="login-container fadeInDown" id="login">
             <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input onclick="alert('Đăng nhập thành công!');login_open()" type="submit" class="fadeIn fourth" value="Log In">
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
             <div class="login-footer fadeIn fourth">
                 <a class="underlineHover" href="#">Forgot Password?</a>
             </div>
@@ -560,10 +560,13 @@
         <div class="login-container fadeInDown" id="register">
             <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input type="text" class="password fadeIn third" name="login" placeholder="repeat your password">
-            <input onclick="alert('Đăng ký thành công!');login_open()" type="submit" class="fadeIn fourth" value="Sign Up">
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
         </div>
     </div>
     <div class="to-top">

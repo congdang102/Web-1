@@ -5,9 +5,6 @@
     #footer {
         min-height: 195px;
     }
-    #footer .social-list a {
-        width: 28px;
-    }
     #footer .social-list .icons {
         font-size: 12px;
     }
@@ -15,15 +12,6 @@
     .post-item .post-item-title a,
     .main-post .post-title a {
         font-size: 22px;
-    }
-    .post-item-entry {
-        font-size: 16px;
-    }
-    .sub-post-list h3 {
-        padding: 10px 0 20px;
-    }
-    .comments-title {
-        padding: 10px 0;
     }
 }
 

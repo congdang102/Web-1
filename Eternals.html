@@ -120,10 +120,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header-logo logo">
-                    <div>
-                        <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
-                    </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -165,6 +163,7 @@
                                 <br>
                                 <img src="./assets/img/Eternals1.jpg" alt="Eternals">
                                 <br>
+                                <br>
                                 <h3><p class="bold-text"> 1. Khởi đầu </p></h3>
                                 Ajak (Salma Hayek) đi tìm Ikaris (Richard Madden), vì các sự kiện của 
                                 Avengers Endgame đã cung cấp đủ năng lượng cho “The Emergence” bắt đầu. 
@@ -190,9 +189,8 @@
                                 về Arishem The Judge. Trong truyện tranh, Arishem là một trong hai 
                                 Celestials có quyền và khả năng đánh giá nền văn minh của hành tinh, 
                                 xác định hành tinh nào đáng được tồn tại và hành tinh nào sẽ bị huỷ diệt. 
-                                <br>
+                                <br><br>
                                 <h3><p class="bold-text"> 2. Tập hợp Eternals</p></h3>  
-                                <br>
                                 Ikaris nói với Ajak rằng họ cần tìm những người khác. Các Eternals đã 
                                 ẩn mình trên khắp thế giới kể từ khi họ đến đây 7.000 năm trước. Tiếp 
                                 sau đó, Phastos (Brian Tyree Henry) nâng con tàu của họ khỏi cát sa mạc.
@@ -212,9 +210,8 @@
                                 từ Ikea và bây giờ nó đã bị hỏng. 
                                 <br>
                                 <img src="./assets/img/Eternals5.jpg" alt="Eternals">
-                                <br>
+                                <br><br>
                                 <h3><p class="bold-text"> 3. Deviant là thực thể gì?</p></h3> 
-                                <br>
                                 Deviant là thiên địch với Eternals. Không giống như các Eternals có 
                                 sức mạnh giống như thần thánh và đẹp đẽ về mặt di truyền, Deviant một 
                                 số được sinh ra với những đột biến cung cấp cho họ sức mạnh siêu phàm 
@@ -225,9 +222,8 @@
                                 ban đầu được tạo ra bởi Celestials như một nguồn thực phẩm.
                                 <br>
                                 <img src="./assets/img/Eternals6.jpg" alt="Eternals">
-                                <br>
+                                <br><br>
                                 <h3><p class="bold-text"> 4. Chuyện gì sẽ xảy ra?</p></h3>
-                                <br>
                                 Phần chính của câu chuyện Eternals có thể được đặt trong tiền cảnh MCU 
                                 ngày nay, phim sẽ tập trung giải thích vai trò của Eternals. Các 
                                 Eternals đã đến Trái Đất hàng năm trước và giúp nền văn minh nhân 
@@ -452,7 +448,7 @@
                             <i class="ti-github icons"></i>
                         </a>
                     </div>
-                    <div class="col l-8 m-12 sm-12 footer-logo logo">
+                    <div class="col l-8 m-12 sm-12 footer-logo">
                         <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
                     </div>
                 </div>
@@ -465,9 +461,11 @@
         <div class="login-container fadeInDown" id="login">
             <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input onclick="alert('Đăng nhập thành công!');login_open()" type="submit" class="fadeIn fourth" value="Log In">
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
             <div class="login-footer fadeIn fourth">
                 <a class="underlineHover" href="#">Forgot Password?</a>
             </div>
@@ -475,10 +473,13 @@
         <div class="login-container fadeInDown" id="register">
             <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input type="text" class="password fadeIn third" name="login" placeholder="repeat your password">
-            <input onclick="alert('Đăng ký thành công!');login_open()" type="submit" class="fadeIn fourth" value="Sign Up">
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
         </div>
     </div>
     <div class="to-top">

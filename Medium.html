@@ -120,10 +120,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header-logo logo">
-                    <div>
-                        <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
-                    </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -177,9 +175,8 @@
                                 phim vẫn còn khá nhiều chi tiết khó hiểu, vì vậy hãy cùng Ghiền 
                                 rewiew và giải thích bộ phim này để khám phá ra những điều hay ho 
                                 của phim nhé!
-                                <br>
+                                <br><br>
                                 <h3><p class="bold-text">I. REVIEW PHIM</p></h3> 
-                                <br>
                                 Cốt truyện: Theo chân nữ pháp sư trung niên tên Nim sống tại vùng 
                                 Đông Bắc Thái Lan, The Medium (2021) đưa người xem đến với những 
                                 chuyện kì lạ xảy đến với Mink – cháu gái của Nim kể từ khi người cha 
@@ -196,9 +193,8 @@
                                 đựng nhiều tình tiết khá khó hiểu nên có thể khiến trải nghiệm xem 
                                 phim của khán giả bị giảm xuống. Hãy cùng Ghiền review phân tích một 
                                 số điểm cộng và điểm trừ của bộ phim này nhé.
-                                <br>
-                                <p class="light-red-text"></p> Điểm cộng:
-                                <br>
+                                <br><br>
+                                <p class="light-red-text bold-text">Điểm cộng:</p>
                                 Như đã nói ở trên, The Medium (2021) được quay theo phong cách phim 
                                 tài liệu dưới góc nhìn thứ nhất nên mang đến cảm giác chân thật và 
                                 tự nhiên đến khó tin, thậm chí nó thật đến nỗi như thể bạn đang được 
@@ -248,8 +244,8 @@
                                 nào, người xem vẫn thấy mlem luôn í. Các diễn viên khác đều mang 
                                 đến được sự tự nhiên và chân thực tuyệt vời, từ đó giúp câu chuyện 
                                 trở nên gần gũi và đáng tin hơn trong mắt người xem.
-                                <p class="light-red-text">Điểm trừ</p> 
-                                <br>
+                                <br><br>
+                                <p class="light-red-text bold-text">Điểm trừ</p> 
                                 Có lẽ điểm trừ lớn nhất của The Medium (2021) chính là sự khiên cưỡng 
                                 và nặng tính sắp đặt trong một số tình tiết phim. Nhiều khán giả sẽ 
                                 thắc mắc tại sao các nhân vật lại hành động một cách thiếu muối như 
@@ -263,9 +259,8 @@
                                 người khác.
                                 <br>
                                 <img src="./assets/img/The-Medium-5.jpg" alt="The Medium">
-                                <br>
-                                <p class="light-red-text">Thang điểm đánh giá:</p>  
-                                <br>
+                                <br><br>
+                                <p class="light-red-text bold-text">Thang điểm đánh giá:</p>  
                                 IMDB: 6.6/10 (823 đánh giá)
                                 <br>
                                 Google: 84/100
@@ -464,7 +459,7 @@
                             <i class="ti-github icons"></i>
                         </a>
                     </div>
-                    <div class="col l-8 m-12 sm-12 footer-logo logo">
+                    <div class="col l-8 m-12 sm-12 footer-logo">
                         <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
                     </div>
                 </div>
@@ -477,9 +472,11 @@
         <div class="login-container fadeInDown" id="login">
             <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input onclick="alert('Đăng nhập thành công!');login_open()" type="submit" class="fadeIn fourth" value="Log In">
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
             <div class="login-footer fadeIn fourth">
                 <a class="underlineHover" href="#">Forgot Password?</a>
             </div>
@@ -487,10 +484,13 @@
         <div class="login-container fadeInDown" id="register">
             <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input type="text" class="password fadeIn third" name="login" placeholder="repeat your password">
-            <input onclick="alert('Đăng ký thành công!');login_open()" type="submit" class="fadeIn fourth" value="Sign Up">
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
         </div>
     </div>
     <div class="to-top">

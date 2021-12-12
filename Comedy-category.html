@@ -120,10 +120,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header-logo logo">
-                    <div>
-                        <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
-                    </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -159,7 +157,7 @@
                             <div class="col l-12 sm-12 widget about-us">
                                 <h4 class="widget-title"><span>about us</span></h4>
                                 <div class="widget-content">
-                                    <img src="https://1.bp.blogspot.com/-hKzByA06584/XxayRkZwaYI/AAAAAAAAK6I/m5yBt4tITLMQ7nOCSbNyaQrb_6BGzpe1ACLcBGAsYHQ/s320/shutterstock_435511333.jpg" alt="">
+                                    <img src="./assets/img/shutterstock.jpg" alt="">
                                     <p>Nơi bạn có thể cập nhật tin tức về chủ đề phim ảnh nhanh nhất</p>
                                 </div>
                             </div>
@@ -264,7 +262,7 @@
                             <i class="ti-github icons"></i>
                         </a>
                     </div>
-                    <div class="col l-8 m-12 sm-12 footer-logo logo">
+                    <div class="col l-8 m-12 sm-12 footer-logo">
                         <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
                     </div>
                 </div>
@@ -277,9 +275,11 @@
         <div class="login-container fadeInDown" id="login">
             <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input onclick="alert('Đăng nhập thành công!');login_open()" type="submit" class="fadeIn fourth" value="Log In">
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
             <div class="login-footer fadeIn fourth">
                 <a class="underlineHover" href="#">Forgot Password?</a>
             </div>
@@ -287,10 +287,13 @@
         <div class="login-container fadeInDown" id="register">
             <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input type="text" class="password fadeIn third" name="login" placeholder="repeat your password">
-            <input onclick="alert('Đăng ký thành công!');login_open()" type="submit" class="fadeIn fourth" value="Sign Up">
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
         </div>
     </div>
     <div class="to-top">

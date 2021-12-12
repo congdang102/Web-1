@@ -116,6 +116,7 @@ function nav_open() {
 function nav_exit() {
     navOverlay.style.display = 'none';
     navMobileTablet.style.display = 'none';
+    sub_nav.style.display = 'none'
 }
 
 // category
@@ -167,7 +168,6 @@ function showSlidesPost(n) {
     if (slidesPost.length == 0) {
         return;
     }
-    
     if (n > slidesPost.length) {slideIndexPost = 1}    
     if (n < 1) {slideIndexPost = slidesPost.length}
     for (j = 0; j < slidesPost.length; j++) {
@@ -175,7 +175,7 @@ function showSlidesPost(n) {
     }
     slidesPost[slideIndexPost-1].style.display = "block";
 }
-// login
+// login / register
 const loginRegister = document.querySelector('#login-register')
 const login = document.querySelector('#login');
 const register = document.querySelector('#register');
@@ -184,6 +184,11 @@ function login_open () {
         loginRegister.style.display = "none";
         login.style.display = "flex";
         register.style.display = "none";
+        document.querySelector('.regex-username-login').innerHTML = '';
+        document.querySelector('.regex-password-login').innerHTML = '';
+        document.querySelector('.regex-username-register').innerHTML = '';
+        document.querySelector('.regex-password-register').innerHTML = '';
+        document.querySelector('.regex-password-again').innerHTML = '';
     }
     else {
         loginRegister.style.display = "flex";
@@ -201,9 +206,74 @@ function register_open () {
     if (register.style.display == "none") {
         login.style.display = "none";
         register.style.display = "flex";
+        document.querySelector('.regex-username-login').innerHTML = '';
+        document.querySelector('.regex-password-login').innerHTML = '';
     }
     else {
         login.style.display = "flex";
         register.style.display = "none";
+        document.querySelector('.regex-username-register').innerHTML = '';
+        document.querySelector('.regex-password-register').innerHTML = '';
+        document.querySelector('.regex-password-again').innerHTML = '';
+    }
+}
+function check_regex() {
+    let regex_check = true;
+    let regex;
+    let username = document.querySelector('.username-login').value;
+    regex = /^(?=.*[a-zA-Z])[\w._]{8,20}$/;
+    if(!regex.test(username)) {
+        document.querySelector('.regex-username-login').innerHTML = "Username không hợp lệ! (dài từ 8-20 ký tự, chứa các kí tự a-z,A-Z,0-9,dấu .,dấu _ )";
+        regex_check = false;
+    }
+    else {
+        document.querySelector('.regex-username-login').innerHTML = '';
+    }
+    let password = document.querySelector('.password-login').value;
+    regex = /^(?=.*[A-Z])(?=.*[a-z])[A-Za-z\d]{8,}$/;
+    if(!regex.test(password)) {
+        document.querySelector('.regex-password-login').innerHTML = "Mật khẩu không hợp lệ! (mật khẩu phải chứa ít nhất 8 ký tự, ít nhất 1 chữ cái thường, 1 chữ cái in hoa và 1 số)";
+        regex_check = false;
+    }
+    else {
+        document.querySelector('.regex-password-login').innerHTML = '';
+    }
+    if(regex_check) {
+        alert('Đăng nhập thành công');
+        login_open();
+    }
+}
+function check_regex_submit() {
+	let regex_check = true;
+	let regex;
+	let username = document.querySelector('.username-register').value;
+	regex = /^(?=.*[a-zA-Z])[\w._]{8,20}$/;
+	if(!regex.test(username)) {
+		document.querySelector('.regex-username-register').innerHTML = "Username không hợp lệ! (dài từ 8-20 ký tự, chứa các kí tự a-z,A-Z,0-9,dấu .,dấu _ )";
+		regex_check = false;
+	}
+	else {  
+		document.querySelector('.regex-username-register').innerHTML = '';
+	}
+    let password = document.querySelector('.password-register').value;
+	regex = /^(?=.*[A-Z])(?=.*[a-z])[A-Za-z\d]{8,}$/;
+	if(!regex.test(password)) {
+		document.querySelector('.regex-password-register').innerHTML = "Mật khẩu không hợp lệ! (mật khẩu phải chứa ít nhất 8 ký tự, ít nhất 1 chữ cái thường, 1 chữ cái in hoa và 1 số)";
+		regex_check = false;
+	}
+	else {
+	    document.querySelector('.regex-password-register').innerHTML = '';
+    }
+    let password_again = document.querySelector('.password-again').value;
+	if(password_again != password) {
+		document.querySelector('.regex-password-again').innerHTML = "Nhập lại mật khẩu";
+		regex_check = false;
+	}
+	else {
+		document.querySelector('.regex-password-again').innerHTML = '';
+	}
+	if(regex_check) {
+		alert('Đăng ký thành công');
+        login_open();
     }
 }

@@ -1,7 +1,7 @@
 /* reset css */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 *:focus {
@@ -24,6 +24,9 @@ button {
 input {
     border: none;
 }
+img {
+    width: 100%;
+}
 .text-center {
     text-align: center !important;
 }
@@ -42,29 +45,28 @@ input {
 }
 /* main css */
 #main {
-    width: 100%;
     color: #4e4e4e;
-    font: normal normal 14px Lora;
+    font: normal 14px Lora;
+    width: 100%;
+    font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0px;
     text-transform: none;
-    font-weight: 400;
     background-color: #ffffff;
 }
 /* Begin: header */
 #header {
-    background-color: #f9eded;
     max-height: 54px;
+    background-color: #f9eded;
 }
 #header .social-list a {
+    display: inline-block;
     color: #000;
     text-align: center;
     width: 28px;
     line-height: 54px;
-    display: inline-block;
 }
-#footer .social-list a:hover,
-#header .social-list a:hover {
+.social-list a:hover {
     opacity: 0.6;
 }
 #header .social-list .icons {
@@ -75,17 +77,17 @@ input {
     text-align: center;
 }
 .nav > li {
+    position: relative;
     display: inline-block;
     padding-right: 35px;
-    position: relative;
 }
 .nav li a {
     display: inline-block;
-    font: 12px Maven Pro;
     color: #353535;
-    text-transform: uppercase;
+    font: 12px Maven Pro;
     line-height: 54px;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 .nav li:hover .sub-nav {
     display: inline-block;
@@ -94,36 +96,36 @@ input {
     opacity: 0.5;
 }
 .nav .sub-nav {
-    display: none;
     position: absolute;
+    display: none;
+    text-align: left;
     top: 100%;
     left: -10px;
-    text-align: left;
     background-color: #f9eded;
     z-index: 1;
 }
 .nav .sub-nav li:hover a {
-    background-color: #333333;
     color: #ffffff;
+    background-color: #333333;
 }
 .nav .sub-nav a {
-    padding: 6px 10px 7px 10px;
     min-width: 160px;
+    padding: 6px 10px 7px 10px;
     line-height: 25px;
     text-transform: none;
 }
 
 .navbar-btn {
-    line-height: 54px;
     padding-left: 20px;
+    line-height: 54px;
 }
 .navbar-btn button {
     color: #333;
     width: 28px;
     height: 28px;
-    z-index: 1;
     background-color: #f9eded;
     cursor: pointer;
+    z-index: 1;
 }
 
 #header .login-btn {
@@ -131,10 +133,10 @@ input {
     cursor: pointer;
 }
 #header .login-btn span {
-    margin-left: 5px;
     font-size: 13px;
-    text-transform: capitalize;
     font-family: Montserrat;
+    margin-left: 5px;
+    text-transform: capitalize;
 }
 #header .login-btn:hover button {
     opacity: 0.6;
@@ -142,50 +144,53 @@ input {
 }
 
 #header .search-box {
-    line-height: 54px;
     text-align: right;
+    line-height: 54px;
 }
 #header .search-box .button {
-    cursor: pointer;
+    color: #626262;
+    text-align: center;
     max-width: 20px;
     max-height: 22px;
     margin-right: 10px;
-    text-align: center;
-    color: #626262;
+    cursor: pointer;
 }
 .header-logo {
     text-align: center;
     padding: 60px 0;
 }
+.footer-logo img,
+.header-logo img {
+    width: 300px;
+}
 
 .nav-overlay {
-    display: none;
     position: fixed;
-    z-index: 1;
+    display: none;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 .nav-mobile-tablet {
-    display: none;
     position: fixed;
-    background-color: #fff;
+    display: none;
     left: 0;
     top: 0;
     bottom: 0;
     width: 320px;
     max-width: 100%;
+    background-color: #fff;
     z-index: 1;
     animation: fadeInLeft ease 0.5s;
 }
 .nav-list-mobile-tablet a {
-    color: #333;
     display: block;
-    padding: 8px 0;
+    color: #333333;
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 16px 20px;
     border: 1px solid #eee;
     cursor: pointer;
 }
@@ -193,29 +198,29 @@ input {
     position: relative;
 }
 .sub-nav-mobile-tablet {
-    display: none;
     position: absolute;
+    display: none;
     top: 100%;
     right: 0;
-    z-index: 1;
     background-color: #f9eded;
+    z-index: 1;
 }
 .sub-nav-mobile-tablet a {
-    padding: 6px 10px 7px 10px;
     min-width: 160px;
+    padding: 6px 10px 7px 10px;
     line-height: 25px;
 }
 .sub-nav-mobile-tablet li:hover a {
-    background-color: #333333;
     color: #ffffff;
+    background-color: #333333;
 }
 .nav-mobile-tablet .social-list {
     margin-left: 10px;
 }
 .nav-mobile-tablet-close {
+    position: absolute;
     color: #666;
     font-size: 1rem;
-    position: absolute;
     top: 1rem;
     right: 1rem;
     border: none;
@@ -226,24 +231,24 @@ input {
 
 /* Begin: sliders */
 #sliders .slideshow {
-    margin: 230px auto 0 auto;
+    position: relative;
     width: 100%;
     padding-top: 33.33333%;
-    overflow: hidden;
-    position: relative;
+    margin: 230px auto 0 auto;
     /* background-image 3:1 */
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 .slider-content {
-    padding: 10px 0;
-    background: #ffffffb9;
     position: absolute;
+    text-align: center;
+    padding: 10px 0;
     bottom: 0;
     left: 0;
     right: 0;
-    text-align: center;
+    background: #ffffffb9;
 }
 .slideshow:hover .slider-content .read-more-btn a {
     display: inline-block;
@@ -262,53 +267,53 @@ input {
 .post-item .post-item-title a,
 .main-post .post-title a,
 .slideshow .title-slider h4 a {
-    font-family: Montserrat;
     color: #000;
+    font-family: Montserrat;
     font-weight: 500;
     line-height: 1.6;
 }
 .comment-block .comment-header .date-time,
 .sub-post-header .sub-meta-date,
 .slideshow .time-info {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
     font-family: Playfair Display;
     margin: 0 0 10px 0;
-    font-size: 12px;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 1;
+    line-height: 1.6;
 }
 .main-post .more-link a,
 .slideshow .read-more-btn a {
+    display: none;
     color: #aaa;
-    border: 1px solid #aaa;
     font-size: 11px;
     font-weight: 400;
     padding: 8px 20px;
-    display: none;
     margin-top: 15px;
     margin-bottom: 10px;
+    border: 1px solid #aaa;
     line-height: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 .main-post .more-link a:hover,
 .slideshow .read-more-btn a:hover {
-    background: #e04f62;
+    color: #ffffff;
     border-color: #e04f62;
-    color: #fff;
+    background: #e04f62;
 }
 /* End: slider */
 
 /* Begin: content */
 #content {
-    margin: 70px 0;
     font-family: Montserrat;
+    margin: 70px 0;
     overflow: hidden;
 }
 /* Begin: web another */
 .sub-web {
-    margin: 230px 0 0 0;
     height: 1px;
+    margin: 230px 0 0 0;
     background-color: #ebebeb;
 }
 .post-label {
@@ -333,21 +338,20 @@ input {
     color: #333;
 }
 .sub-post-header .sub-meta-date a:hover {
-    opacity: 0.5;
+    opacity: 0.4;
 }
 /* sub-content */
 .sub-post-entry {
-    margin-top: 20px;
     text-align: justify;
+    margin-top: 20px;
 }
 .sub-post-entry img {
-    width: 100%;
     margin-top: 10px;
 }
 .sub-post-meta {
+    padding: 10px 0;
     margin-top: 20px;
     margin-bottom: 5px;
-    padding: 10px 0;
     border-top: 1px solid #ebebeb;
 }
 .sub-post-meta .entry-tags p {
@@ -357,24 +361,24 @@ input {
     text-align: right;
 }
 .sub-post-meta .sub-post-share a {
-    font-size: 16px;
-    color: #333;
-    width: 30px;
     display: inline-block;
+    color: #333;
+    font-size: 16px;
+    width: 30px;
 }
 .sub-post-meta .sub-post-share a:hover {
     opacity: 0.5;
 }
 .sub-blog-paper {
-    background-color: #f9f9f9;
     padding: 10px;
+    background-color: #f9f9f9;
 }
 .sub-blog-paper a {
-    text-align: right;
     display: block;
-    line-height: 20px;
-    font-size: 14px;
     color: #333;
+    font-size: 14px;
+    text-align: right;
+    line-height: 20px;
     opacity: 0.5;
 }
 .sub-blog-paper a i {
@@ -388,10 +392,10 @@ input {
     margin-bottom: 50px;
 }
 .sub-post-list h3 {
+    padding: 10px 0 20px;
     text-transform: uppercase;
 }
 .sub-post-item img {
-    width: 100%;
     margin-bottom: 10px;
 }
 .sub-post-item a {
@@ -400,6 +404,7 @@ input {
     margin-bottom: 20px;
 }
 .sub-post-comments .comments-title {
+    padding: 10px 0;
     margin-bottom: 20px;
 }
 .sub-post-comments h3 {
@@ -408,13 +413,10 @@ input {
 .sub-post-comments .comment {
     margin-bottom: 30px;
 }
-.comment .avatar-img img {
-    width: 100%;
-}
 .comment-block .comment-header .user {
-    text-transform: uppercase;
     font-size: 15px;
     padding-bottom: 5px;
+    text-transform: uppercase;
 }
 .comment-block .comment-content {
     padding-top: 10px;
@@ -428,9 +430,6 @@ input {
 .main-content .main-post {
     text-align: center;
 }
-.main-content .main-post img {
-    width: 100%;
-}
 .main-post .category-name-post {
     margin-top: 20px;
     margin-bottom: 15px;
@@ -439,17 +438,17 @@ input {
     position: relative;
     display: inline-block;
     padding: 0 15px;
-    line-height: 1.4;
     margin-bottom: 12px;
+    line-height: 1.4;
 }
 .main-post .category-name-post a::before,
 .main-post .category-name-post a::after {
-    content: '';
-    display: block;
-    height: 0.5px;
-    width: 25px;
+    content: "";
     position: absolute;
-    top: 43%;
+    display: block;
+    width: 25px;
+    height: 0.5px;
+    top: 50%;
     background-color: #e04f62;
 }
 .main-post .category-name-post a::before {
@@ -463,10 +462,10 @@ input {
     letter-spacing: 3px;
 }
 .main-post .post-content {
-    margin-top: 20px;
     text-align: justify;
-    line-height: 1.6;
+    margin-top: 20px;
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 .main-post .more-link a {
     display: inline-block;
@@ -476,9 +475,9 @@ input {
     color: #aaaaaa;
     padding: 5px 0px;
     text-align: left;
-    border: 1px solid #ebebeb;
     border-left: none;
     border-right: none;
+    border: 1px solid #ebebeb;
 }
 .main-post .post-meta .span1 {
     display: inline-block;
@@ -494,29 +493,25 @@ input {
 .post-list .post-item {
     margin: 20px 0;
 }
-.post-item .post-item-img img {
-    width: 100%;
-}
 .post-item .post-item-entry {
     text-align: justify;
+    font-size: 16px;
 }
 /* sidebar */
 #content .sidebar-content {
     width: 28%;
     height: 100%;
-    float: right;
 }
 .sidebar-content .widget {
-    width: 280px;
     padding: 40px 32px;
-    border: 1px solid #ebebeb;
     margin-bottom: 50px;
+    border: 1px solid #ebebeb;
 }
 .widget .widget-title {
     text-align: center;
+    margin-bottom: 20px;
     text-transform: uppercase;
     overflow: hidden;
-    margin-bottom: 20px;
 }
 .widget .widget-title span {
     position: relative;
@@ -526,11 +521,10 @@ input {
 .widget .widget-title span:after {
     content: "";
     position: absolute;
-    top: 50%;
-    border-bottom: 1px solid;
-    border-color: #eee;
     width: 200px;
+    top: 50%;
     margin: 0 14px;
+    border-bottom: 1px solid #eee;
 }
 .widget .widget-title span:after {
     left: 100%;
@@ -538,17 +532,11 @@ input {
 .widget .widget-title span:before {
     right: 100%;
 }
-.about-us img {
-    width: 100%;
-}
 .about-us p {
-    text-align: center;
     color: #333;
+    text-align: center;
 }
 
-.trailer img {
-    width: 100%;
-}
 .trailer .video-trailer {
     min-height: 110px;
 }
@@ -558,26 +546,25 @@ input {
 }
 .follow-us .widget-list a {
     display: inline-block;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
+    color: #444444;
     font-size: 15px;
     text-align: center;
+    width: 36px;
+    height: 36px;
     border: 1px solid #f0f0f0;
     border-radius: 50%;
-    color: #444444;
+    line-height: 36px;
 }
 
 .labels .label a {
     display: inline-block;
+    color: #646464;
     line-height: 14px;
     font-size: 10px;
     border: 1px solid #eeeeee;
     padding: 6px 10px;
     margin: 2px 0;
-    color: #646464;
     text-transform: uppercase;
-    transition: all 0.5s;
 }
 
 .recent-posts .side-item {
@@ -591,31 +578,30 @@ input {
     display: inline-block;
     overflow: hidden;
 }
+.recent-posts .side-item-text p,
 .recent-posts .side-item-text a {
-    color: #333;
-}
-.recent-posts .side-item-text p {
     color: #333;
 }
 /* End: content */
 
 /* Begin: footer */
-
 #footer .footer-logo {
     margin: 30px 0;
     text-align: center;
 }
 #footer .social-list a {
+    display: inline-block;
     color: #000;
+    width: 28px;
     text-align: center;
     line-height: 40px;
-    display: inline-block;
 }
 /* End: footer */
 
 /* to top button */
 .to-top {
     position: fixed;
+    display: none;
     right: 0;
     bottom: 0;
     padding: 10px;
@@ -623,7 +609,6 @@ input {
     border: 1px solid #ccc;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
-    display: none;
 }
 .to-top a {
     color: #000;
@@ -640,18 +625,16 @@ input {
 }
 /* Next & previous buttons */
 .prev, .next {
-    cursor: pointer;
     position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
     top: 50%;
-    width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    user-select: none;
+    transition: 0.6s ease;
+    cursor: pointer;
 }
 /* Position the "next button" to the right */
 .next {
@@ -683,12 +666,9 @@ input {
     line-height: 1.6;
 }
 .search-item {
+    width: 100%;
     padding: 10px;
-    width: 100%;
     margin-bottom: 20px;
-}
-.search-item img {
-    width: 100%;
 }
 .search-item a {
     color: #333;
@@ -701,16 +681,16 @@ input {
 /* login */
 #login-register {
     position: fixed;
+    display: none;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     font-family: "Poppins", sans-serif;
-    z-index: 1;
-    display: none;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 #login {
     display: flex;
@@ -720,21 +700,21 @@ input {
 }
 #login-register .login-container {
     position: relative;
-    background-color: #fff;
+    text-align: center;
     align-items: center;
     flex-direction: column; 
     justify-content: center;
-    width: 600px;
+    width: 650px;
     padding-top: 40px;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-    text-align: center;
+    background-color: #fff;
 }
 #login-register .login-container .switch-btn {
     position: absolute;
-    left: 40px;
-    top: 15px;
     color: rgba(0, 0, 0, 0.6);
+    top: 15px;
+    left: 40px;
 }
 #login-register .login-container .switch-btn a {
     color: #5fbbe9f8;
@@ -742,12 +722,12 @@ input {
 }
 #login-register .login-container .login-close {
     position: absolute;
-    right: 10px;
     top: 10px;
+    right: 10px;
     cursor: pointer;
 }
+#login-register .login-container input[type=password],
 #login-register .login-container input[type=text] {
-    background-color: #f6f6f6;
     color: #0d0d0d;
     padding: 15px 32px;
     text-align: center;
@@ -756,24 +736,27 @@ input {
     width: 85%;
     border: 2px solid #f6f6f6;
     border-radius: 5px 5px 5px 5px;
+    background-color: #f6f6f6;
 }
+#login-register .login-container input[type=password]:focus,
 #login-register .login-container input[type=text]:focus {
-    background-color: #fff;
     border-bottom: 2px solid #5fbae9;
+    background-color: #fff;
 }
+#login-register .login-container input[type=password]::placeholder,
 #login-register .login-container input[type=text]::placeholder {
     color: #cccccc;
 }
 #login-register .login-container input[type=submit] {
-    background-color: #56baed;
     color: white;
-    padding: 15px 80px;
-    text-align: center;
-    text-transform: uppercase;
     font-size: 13px;
-    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    padding: 15px 80px;
     margin: 5px 0 30px;
+    text-transform: uppercase;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    background-color: #56baed;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -784,16 +767,16 @@ input {
     transform: scale(0.95);
 }
 #login-register .login-container .login-footer {
-    background-color: #f6f6f6;
-    border-top: 1px solid #dce8f1;
-    padding: 25px;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
     width: 100%;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #dce8f1;
+    border-radius: 0 0 10px 10px;
+    background-color: #f6f6f6;
 }
 #login-register .login-container .login-footer a {
-    color: #92badd;
     display: inline-block;
+    color: #92badd;
 }
 /* animation */
 .fadeInDown {
@@ -855,13 +838,13 @@ input {
     animation-delay: 1s;
 }
 .underlineHover:after {
+    content: "";
     display: block;
     left: 0;
     bottom: -10px;
     width: 0;
     height: 2px;
     background-color: #56baed;
-    content: "";
     transition: width 0.2s;
 }
 .underlineHover:hover {

@@ -120,10 +120,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header-logo logo">
-                    <div>
-                        <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
-                    </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -154,10 +152,8 @@
                                 điển mà chúng ta dường như từng được nhắc đến ở đâu đó trước đây.
                                 <br>
                                 <img src="./assets/img/Sherlock1.jpg" alt="Sherlock">
-                                <br>
-                                <br>
+                                <br><br>
                                 <h3> <p class="bold-text"> Review phim Sherlock </p></h3> 
-                                <br>
                                 Trong seires phim truyền hình do đài BBC thực hiện, chúng ta được 
                                 một lần nữa nhìn thấy tài năng phá án của nhân vật này ở thời hiện 
                                 đại với kỹ năng quan sát và khả năng phân tích hiếm có của Sherlock 
@@ -187,7 +183,7 @@
                                 đấu trí sẽ khiến bạn thật sự shock nếu chưa từng theo dõi thể loại 
                                 phim này trước kia.
                                 <br>
-                                <img src="./assets/img/Sherlock-3jpg.jpg" alt="Sherlock">
+                                <img src="./assets/img/Sherlock-3.jpg" alt="Sherlock">
                                 <br>
                                 Và khi xem đến cuối series này, bạn sẽ bất ngờ với những điều vừa 
                                 phát hiện ra. Đôi khi, chúng sẽ khiến bạn xem lại cả mùa đầu tiên 
@@ -406,7 +402,7 @@
                             <i class="ti-github icons"></i>
                         </a>
                     </div>
-                    <div class="col l-8 m-12 sm-12 footer-logo logo">
+                    <div class="col l-8 m-12 sm-12 footer-logo">
                         <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
                     </div>
                 </div>
@@ -419,9 +415,11 @@
         <div class="login-container fadeInDown" id="login">
             <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input onclick="alert('Đăng nhập thành công!');login_open()" type="submit" class="fadeIn fourth" value="Log In">
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
             <div class="login-footer fadeIn fourth">
                 <a class="underlineHover" href="#">Forgot Password?</a>
             </div>
@@ -429,10 +427,13 @@
         <div class="login-container fadeInDown" id="register">
             <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
             <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
-            <input type="text" class="username fadeIn second" name="login" placeholder="username">
-            <input type="text" class="password fadeIn third" name="login" placeholder="password">
-            <input type="text" class="password fadeIn third" name="login" placeholder="repeat your password">
-            <input onclick="alert('Đăng ký thành công!');login_open()" type="submit" class="fadeIn fourth" value="Sign Up">
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
         </div>
     </div>
     <div class="to-top">
